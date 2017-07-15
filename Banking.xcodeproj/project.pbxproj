@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		2D726BE31F1A783400AD1EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BE21F1A783400AD1EBA /* AppDelegate.swift */; };
-		2D726BE51F1A783400AD1EBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BE41F1A783400AD1EBA /* ViewController.swift */; };
+		2D726BE51F1A783400AD1EBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BE41F1A783400AD1EBA /* LoginViewController.swift */; };
 		2D726BE81F1A783400AD1EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BE61F1A783400AD1EBA /* Main.storyboard */; };
 		2D726BEA1F1A783400AD1EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BE91F1A783400AD1EBA /* Assets.xcassets */; };
 		2D726BED1F1A783400AD1EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BEB1F1A783400AD1EBA /* LaunchScreen.storyboard */; };
+		2D726BF71F1A7BCB00AD1EBA /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */; };
+		2D726BF91F1A815900AD1EBA /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BF81F1A815900AD1EBA /* AccountsViewController.swift */; };
+		2D726BFC1F1A819000AD1EBA /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BFB1F1A819000AD1EBA /* TransactionsViewController.swift */; };
+		2D726BFF1F1A821400AD1EBA /* Zadatak_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BFE1F1A821400AD1EBA /* Zadatak_1.json */; };
+		2D726C011F1A829D00AD1EBA /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C001F1A829D00AD1EBA /* AccountCollectionViewCell.swift */; };
+		2D726C031F1A859100AD1EBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C021F1A859100AD1EBA /* User.swift */; };
+		2D726C051F1A85D800AD1EBA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C041F1A85D800AD1EBA /* Account.swift */; };
+		2D726C071F1A861D00AD1EBA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C061F1A861D00AD1EBA /* Transaction.swift */; };
+		2D726C091F1A95BA00AD1EBA /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C081F1A95BA00AD1EBA /* TransactionTableViewCell.swift */; };
+		2D726C0C1F1A9D4100AD1EBA /* UIColor+Banking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726C0B1F1A9D4100AD1EBA /* UIColor+Banking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D726BDF1F1A783400AD1EBA /* Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D726BE21F1A783400AD1EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D726BE41F1A783400AD1EBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D726BE41F1A783400AD1EBA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D726BE71F1A783400AD1EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D726BE91F1A783400AD1EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D726BEC1F1A783400AD1EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D726BEE1F1A783400AD1EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		2D726BF81F1A815900AD1EBA /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		2D726BFB1F1A819000AD1EBA /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		2D726BFE1F1A821400AD1EBA /* Zadatak_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Zadatak_1.json; sourceTree = "<group>"; };
+		2D726C001F1A829D00AD1EBA /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D726C021F1A859100AD1EBA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		2D726C041F1A85D800AD1EBA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = ../Account.swift; sourceTree = "<group>"; };
+		2D726C061F1A861D00AD1EBA /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = ../Transaction.swift; sourceTree = "<group>"; };
+		2D726C081F1A95BA00AD1EBA /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		2D726C0B1F1A9D4100AD1EBA /* UIColor+Banking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Banking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +75,63 @@
 			isa = PBXGroup;
 			children = (
 				2D726BE21F1A783400AD1EBA /* AppDelegate.swift */,
-				2D726BE41F1A783400AD1EBA /* ViewController.swift */,
 				2D726BE61F1A783400AD1EBA /* Main.storyboard */,
+				2D726BF51F1A7BB000AD1EBA /* Login */,
+				2D726BFA1F1A816100AD1EBA /* Accounts */,
+				2D726BFD1F1A819300AD1EBA /* Transactions */,
+				2D726C0A1F1A9D2E00AD1EBA /* Shared */,
+				2D726BF41F1A784C00AD1EBA /* Supporting Files */,
+			);
+			path = Banking;
+			sourceTree = "<group>";
+		};
+		2D726BF41F1A784C00AD1EBA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				2D726BE91F1A783400AD1EBA /* Assets.xcassets */,
 				2D726BEB1F1A783400AD1EBA /* LaunchScreen.storyboard */,
 				2D726BEE1F1A783400AD1EBA /* Info.plist */,
+				2D726BFE1F1A821400AD1EBA /* Zadatak_1.json */,
 			);
-			path = Banking;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D726BF51F1A7BB000AD1EBA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2D726BE41F1A783400AD1EBA /* LoginViewController.swift */,
+				2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2D726BFA1F1A816100AD1EBA /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				2D726BF81F1A815900AD1EBA /* AccountsViewController.swift */,
+				2D726C001F1A829D00AD1EBA /* AccountCollectionViewCell.swift */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		2D726BFD1F1A819300AD1EBA /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				2D726BFB1F1A819000AD1EBA /* TransactionsViewController.swift */,
+				2D726C081F1A95BA00AD1EBA /* TransactionTableViewCell.swift */,
+				2D726C021F1A859100AD1EBA /* User.swift */,
+				2D726C041F1A85D800AD1EBA /* Account.swift */,
+				2D726C061F1A861D00AD1EBA /* Transaction.swift */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		2D726C0A1F1A9D2E00AD1EBA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2D726C0B1F1A9D4100AD1EBA /* UIColor+Banking.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +196,7 @@
 			files = (
 				2D726BED1F1A783400AD1EBA /* LaunchScreen.storyboard in Resources */,
 				2D726BEA1F1A783400AD1EBA /* Assets.xcassets in Resources */,
+				2D726BFF1F1A821400AD1EBA /* Zadatak_1.json in Resources */,
 				2D726BE81F1A783400AD1EBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +208,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D726BE51F1A783400AD1EBA /* ViewController.swift in Sources */,
+				2D726BE51F1A783400AD1EBA /* LoginViewController.swift in Sources */,
 				2D726BE31F1A783400AD1EBA /* AppDelegate.swift in Sources */,
+				2D726C011F1A829D00AD1EBA /* AccountCollectionViewCell.swift in Sources */,
+				2D726BF91F1A815900AD1EBA /* AccountsViewController.swift in Sources */,
+				2D726BF71F1A7BCB00AD1EBA /* PinViewController.swift in Sources */,
+				2D726C051F1A85D800AD1EBA /* Account.swift in Sources */,
+				2D726C091F1A95BA00AD1EBA /* TransactionTableViewCell.swift in Sources */,
+				2D726BFC1F1A819000AD1EBA /* TransactionsViewController.swift in Sources */,
+				2D726C0C1F1A9D4100AD1EBA /* UIColor+Banking.swift in Sources */,
+				2D726C031F1A859100AD1EBA /* User.swift in Sources */,
+				2D726C071F1A861D00AD1EBA /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
