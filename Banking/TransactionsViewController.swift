@@ -20,18 +20,21 @@ class TransactionsViewController: UIViewController {
         accountCurrencyLabel.text = account.currency
         accountIBANLabel.text = account.iban
         
-        var balanceString = ""
         switch account.currency {
         case "HRK":
-           balanceString = "\(account.amount) Kn"
+            numberFormatter.locale = Locale.init(identifier: "hr")
+            numberFormatter.currencySymbol = "Kn"
         case "EUR":
-            balanceString = "\(account.amount) €"
+            numberFormatter.locale = Locale.init(identifier: "de")
+            numberFormatter.currencySymbol = "€"
         case "USD":
-            balanceString = "$ \(account.amount)"
+            numberFormatter.locale = Locale.init(identifier: "en")
+            numberFormatter.currencySymbol = "$"
         default:
-            balanceString = "\(account.amount)"
+            numberFormatter.locale = Locale.init(identifier: "hr")
+            numberFormatter.currencySymbol = "Kn"
         }
-        accountBalanceLabel.text = balanceString
+        accountBalanceLabel.text = numberFormatter.string(for: account.amount)
 
         tableView.tableFooterView = UIView()
     }

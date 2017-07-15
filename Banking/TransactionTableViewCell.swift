@@ -15,7 +15,23 @@ class TransactionTableViewCell: UITableViewCell {
     func setup(transaction: Transaction) {
         descriptionLabel.text = transaction.description
         dateLabel.text = dateFormatter.string(from: transaction.date)
-        amountLabel.text = String("$ \(transaction.amount)")
+        
+        
+        switch transaction.currency {
+        case .hrk:
+            numberFormatter.locale = Locale.init(identifier: "hr")
+            numberFormatter.currencySymbol = "Kn"
+        case .eur:
+            numberFormatter.locale = Locale.init(identifier: "de")
+            numberFormatter.currencySymbol = "€"
+        case .usd:
+            numberFormatter.locale = Locale.init(identifier: "en")
+            numberFormatter.currencySymbol = "$"
+        case .none:
+            numberFormatter.locale = Locale.init(identifier: "hr")
+            numberFormatter.currencySymbol = "Kn"
+        }
+        amountLabel.text = numberFormatter.string(for: transaction.amount)
         
         if let type = transaction.type {
             switch type {

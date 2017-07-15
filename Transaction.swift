@@ -1,6 +1,8 @@
 import Foundation
 
-var dateFormatter = DateFormatter()
+enum Currency {
+    case hrk, eur, usd, none
+}
 
 class Transaction {
     
@@ -9,6 +11,8 @@ class Transaction {
     var description: String
     var amount: Decimal
     var type: String?
+    var currency: Currency = .hrk
+    
     
     init(id: Int, date: Date = Date(), description: String = "", amount: Decimal = 0.0) {
         self.id = id
@@ -19,9 +23,6 @@ class Transaction {
     
     func setupWith(_ dict: [String: Any]) {
         
-        // FIXME: move somewhere else
-        dateFormatter.dateFormat = "dd.MM.yyyy."
-        
         if let idString = dict["id"] as? String {
             id = Int(idString) ?? 0
         }
@@ -30,7 +31,21 @@ class Transaction {
         }
         description = dict["description"] as? String ?? ""
         
-        let amountString = dict["amount"] as? String ?? ""
+        if let amountString = dict["amount"] as? String {
+            let number = amountString.components(separatedBy: " ")
+            let decimalNumber = number[0]
+            
+            switch number[1] {
+            case "HRK": currency = .hrk
+            case "EUR": currency = .eur
+            case "USD": currency = .usd
+            default: currency = .none
+            }
+            
+            let amountNumber = numberFormatter.number(from: decimalNumber)
+            amount = amountNumber?.decimalValue ?? 0.0
+        }
+        
         type = dict["type"] as? String
     }
     

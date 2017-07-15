@@ -23,12 +23,13 @@ class Account {
         }
         
         iban = dict["IBAN"] as? String ?? ""
+        currency = dict["currency"] as? String ?? ""
+        
         if let amountString = dict["amount"] as? String {
             let amountNumber = numberFormatter.number(from: amountString)
             amount = amountNumber?.decimalValue ?? 0.0
         }
         
-        currency = dict["currency"] as? String ?? ""
         
         if let transactionsJson = dict["transactions"] as? [[String: Any]] {
             for item in transactionsJson {

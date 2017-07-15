@@ -1,10 +1,13 @@
 import UIKit
 
 let numberFormatter = NumberFormatter()
+let dateFormatter = DateFormatter()
 
 class AccountsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var colors: [UIColor] = [.navigationBarBlue, .green, .purple]
     
     var accounts: [Account] = [] {
         didSet {
@@ -15,9 +18,10 @@ class AccountsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        numberFormatter.numberStyle = .currency
+        numberFormatter.numberStyle = .decimal
         numberFormatter.locale = Locale.init(identifier: "hr")
-
+        dateFormatter.dateFormat = "dd.MM.yyyy."
+    
         parseJson()
     }
     
@@ -53,9 +57,7 @@ extension AccountsViewController: UICollectionViewDataSource {
         let item = accounts[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AccountCollectionViewCell", for: indexPath) as! AccountCollectionViewCell
-        cell.currencyLabel.text = item.currency
-        cell.ibanLabel.text = item.iban
-        cell.totalAmountLabel.text = String(describing: item.amount)
+        cell.setup(account: item, with: colors[indexPath.row])
         return cell
     }
 }
