@@ -38,10 +38,12 @@ class TransactionTableViewCell: UITableViewCell {
             case "EXCHANGE":
                 typeImageView.image = UIImage(named: "Exchange")
             case "GSM VOUCHER":
-                typeImageView.image = UIImage(named: "Gsm-Voucher")
+                typeImageView.image = UIImage(named: "Gsm")
             default:
                 typeImageView.image = UIImage(named: "Unknown")
             }
+        } else {
+            typeImageView.image = UIImage(named: "Unknown")
         }
     }
 

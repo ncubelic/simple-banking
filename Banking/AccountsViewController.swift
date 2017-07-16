@@ -3,9 +3,16 @@ import UIKit
 let numberFormatter = NumberFormatter()
 let dateFormatter = DateFormatter()
 
+protocol AccountDelegate {
+    func showLoginScreen()
+}
+
 class AccountsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    
+    var delegate: AccountDelegate?
     
     var colors: [UIColor] = [.navigationBarBlue, .green, .purple]
     
@@ -18,14 +25,50 @@ class AccountsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let blurEffect = UIBlurEffect(style: .prominent)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = view.bounds
+        view.addSubview(blurredEffectView)
+        
         numberFormatter.numberStyle = .decimal
         numberFormatter.locale = Locale.init(identifier: "hr")
         dateFormatter.dateFormat = "dd.MM.yyyy."
     
         parseJson()
+
+        // if user login is required only once, but not very secure for banking
+//        guard let _ = UserDefaults.standard.string(forKey: "LoggedIn") else {
+//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            let navVC = UINavigationController(rootViewController: vc)
+//            
+//            self.present(navVC, animated: true, completion: {
+//                blurredEffectView.removeFromSuperview()
+//            })
+//            
+//            return
+//        }
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let navVC = UINavigationController(rootViewController: vc)
+        
+        self.present(navVC, animated: true, completion: {
+            blurredEffectView.removeFromSuperview()
+        })
+        blurredEffectView.removeFromSuperview()
     }
     
     @IBAction func logoutAction(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: .actionSheet)
+        let actionLogout = UIAlertAction(title: "Logout", style: .destructive, handler: { [weak self] _ in
+            UserDefaults.standard.removeObject(forKey: "LoggedIn")
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+            let navVC = UINavigationController(rootViewController: vc)
+            self?.present(navVC, animated: true, completion: nil)
+        })
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(actionLogout)
+        alert.addAction(actionCancel)
+        present(alert, animated: true, completion: nil)
     }
 
     private func parseJson() {
@@ -69,6 +112,7 @@ extension AccountsViewController: UICollectionViewDelegate {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TransactionsViewController") as! TransactionsViewController
         vc.account = item
+        vc.color = colors[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }

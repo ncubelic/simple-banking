@@ -6,19 +6,26 @@ class TransactionsViewController: UIViewController {
     @IBOutlet weak var accountCurrencyLabel: UILabel!
     @IBOutlet weak var accountIBANLabel: UILabel!
     @IBOutlet weak var accountBalanceLabel: UILabel!
+    @IBOutlet weak var coloredView: UIView!
     
     var transactions: [Transaction] = []
     var account: Account?
+    var color: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let account = account else { return }
+        guard let account = account,
+            let color = color
+            else { return }
         transactions = account.transactions
         
         navigationItem.title = account.currency
         accountCurrencyLabel.text = account.currency
         accountIBANLabel.text = account.iban
+        
+        navigationController?.navigationBar.barTintColor = color
+        coloredView.backgroundColor = color
         
         switch account.currency {
         case "HRK":
@@ -35,10 +42,13 @@ class TransactionsViewController: UIViewController {
             numberFormatter.currencySymbol = "Kn"
         }
         accountBalanceLabel.text = numberFormatter.string(for: account.amount)
+        
+        transactions = transactions.sorted(by: { (one, two) in
+            return one.date > two.date
+        })
 
         tableView.tableFooterView = UIView()
     }
-    
 }
 
 extension TransactionsViewController: UITableViewDataSource {

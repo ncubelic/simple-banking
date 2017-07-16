@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3367861F1B3D05006DDB9C /* PinKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3367851F1B3D05006DDB9C /* PinKeyboard.xib */; };
+		2D3367881F1B3D59006DDB9C /* PinKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3367871F1B3D59006DDB9C /* PinKeyboard.swift */; };
+		2D33678B1F1B40A0006DDB9C /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33678A1F1B40A0006DDB9C /* KeyboardButton.swift */; };
+		2D33678D1F1B41D6006DDB9C /* UIView+Banking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33678C1F1B41D6006DDB9C /* UIView+Banking.swift */; };
+		2D33678F1F1B727B006DDB9C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33678E1F1B727B006DDB9C /* RegisterViewController.swift */; };
+		2D3367911F1B7F3D006DDB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D3367901F1B7F3D006DDB9C /* Assets.xcassets */; };
 		2D726BE31F1A783400AD1EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BE21F1A783400AD1EBA /* AppDelegate.swift */; };
 		2D726BE51F1A783400AD1EBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BE41F1A783400AD1EBA /* LoginViewController.swift */; };
 		2D726BE81F1A783400AD1EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BE61F1A783400AD1EBA /* Main.storyboard */; };
-		2D726BEA1F1A783400AD1EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BE91F1A783400AD1EBA /* Assets.xcassets */; };
 		2D726BED1F1A783400AD1EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D726BEB1F1A783400AD1EBA /* LaunchScreen.storyboard */; };
 		2D726BF71F1A7BCB00AD1EBA /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */; };
 		2D726BF91F1A815900AD1EBA /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D726BF81F1A815900AD1EBA /* AccountsViewController.swift */; };
@@ -25,11 +30,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3367851F1B3D05006DDB9C /* PinKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinKeyboard.xib; sourceTree = "<group>"; };
+		2D3367871F1B3D59006DDB9C /* PinKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinKeyboard.swift; sourceTree = "<group>"; };
+		2D33678A1F1B40A0006DDB9C /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		2D33678C1F1B41D6006DDB9C /* UIView+Banking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Banking.swift"; sourceTree = "<group>"; };
+		2D33678E1F1B727B006DDB9C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2D3367901F1B7F3D006DDB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D726BDF1F1A783400AD1EBA /* Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D726BE21F1A783400AD1EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D726BE41F1A783400AD1EBA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D726BE71F1A783400AD1EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2D726BE91F1A783400AD1EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D726BEC1F1A783400AD1EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D726BEE1F1A783400AD1EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3367891F1B3D7F006DDB9C /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2D3367871F1B3D59006DDB9C /* PinKeyboard.swift */,
+				2D3367851F1B3D05006DDB9C /* PinKeyboard.xib */,
+				2D33678A1F1B40A0006DDB9C /* KeyboardButton.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
 		2D726BD61F1A783400AD1EBA = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +108,10 @@
 		2D726BF41F1A784C00AD1EBA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D726BE91F1A783400AD1EBA /* Assets.xcassets */,
 				2D726BEB1F1A783400AD1EBA /* LaunchScreen.storyboard */,
 				2D726BEE1F1A783400AD1EBA /* Info.plist */,
 				2D726BFE1F1A821400AD1EBA /* Zadatak_1.json */,
+				2D3367901F1B7F3D006DDB9C /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -101,6 +121,7 @@
 			children = (
 				2D726BE41F1A783400AD1EBA /* LoginViewController.swift */,
 				2D726BF61F1A7BCB00AD1EBA /* PinViewController.swift */,
+				2D33678E1F1B727B006DDB9C /* RegisterViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -130,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				2D726C0B1F1A9D4100AD1EBA /* UIColor+Banking.swift */,
+				2D33678C1F1B41D6006DDB9C /* UIView+Banking.swift */,
+				2D3367891F1B3D7F006DDB9C /* Keyboard */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -195,9 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D726BED1F1A783400AD1EBA /* LaunchScreen.storyboard in Resources */,
-				2D726BEA1F1A783400AD1EBA /* Assets.xcassets in Resources */,
 				2D726BFF1F1A821400AD1EBA /* Zadatak_1.json in Resources */,
 				2D726BE81F1A783400AD1EBA /* Main.storyboard in Resources */,
+				2D3367861F1B3D05006DDB9C /* PinKeyboard.xib in Resources */,
+				2D3367911F1B7F3D006DDB9C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,15 +234,19 @@
 			files = (
 				2D726BE51F1A783400AD1EBA /* LoginViewController.swift in Sources */,
 				2D726BE31F1A783400AD1EBA /* AppDelegate.swift in Sources */,
+				2D33678B1F1B40A0006DDB9C /* KeyboardButton.swift in Sources */,
 				2D726C011F1A829D00AD1EBA /* AccountCollectionViewCell.swift in Sources */,
 				2D726BF91F1A815900AD1EBA /* AccountsViewController.swift in Sources */,
 				2D726BF71F1A7BCB00AD1EBA /* PinViewController.swift in Sources */,
+				2D33678F1F1B727B006DDB9C /* RegisterViewController.swift in Sources */,
 				2D726C051F1A85D800AD1EBA /* Account.swift in Sources */,
 				2D726C091F1A95BA00AD1EBA /* TransactionTableViewCell.swift in Sources */,
 				2D726BFC1F1A819000AD1EBA /* TransactionsViewController.swift in Sources */,
+				2D3367881F1B3D59006DDB9C /* PinKeyboard.swift in Sources */,
 				2D726C0C1F1A9D4100AD1EBA /* UIColor+Banking.swift in Sources */,
 				2D726C031F1A859100AD1EBA /* User.swift in Sources */,
 				2D726C071F1A861D00AD1EBA /* Transaction.swift in Sources */,
+				2D33678D1F1B41D6006DDB9C /* UIView+Banking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +410,7 @@
 				2D726BF31F1A783400AD1EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
