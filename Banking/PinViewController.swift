@@ -61,11 +61,19 @@ class PinViewController: UIViewController {
                 present(alert, animated: true, completion: nil)
             }
         } else {
-            UserDefaults.standard.setValue(user.id, forKey: "LoggedIn")
-            UserDefaults.standard.setValue(user.firstName, forKey: "UserFirstName")
-            UserDefaults.standard.setValue(user.lastName, forKey: "UserLastName")
-            UserDefaults.standard.setValue(pinTextField.text, forKey: "UserPIN")
-            dismiss(animated: true, completion: nil)
+            guard let text = pinTextField.text else { return }
+            if text.characters.count < 4 || text.characters.count > 6 {
+                let alert = UIAlertController(title: "Validation Error", message: "Please enter 4-6 digits for PIN", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(alertAction)
+                present(alert, animated: true, completion: nil)
+            } else {
+                UserDefaults.standard.setValue(user.id, forKey: "LoggedIn")
+                UserDefaults.standard.setValue(user.firstName, forKey: "UserFirstName")
+                UserDefaults.standard.setValue(user.lastName, forKey: "UserLastName")
+                UserDefaults.standard.setValue(pinTextField.text, forKey: "UserPIN")
+                dismiss(animated: true, completion: nil)
+            }
         }
     }
     
